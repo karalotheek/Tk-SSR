@@ -1,0 +1,32 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "base/base";
+@import "base/typography";
+@import "base/common";
+
+//components styling
+@import "./components/animate.min.css"; //styles of animate.js
+@import "./components/nprogress"; //styles of nprogress
+@import "./components/file_uploader"; //styles of image uploader
+@import "components/layouts/Default/Default";
+@import "components/elements/svgIcon/SvgIcon";
+@import "components/elements/modal/modal";
+
+// modules styling
+@import "components/modules/Header/Header";
+@import "components/modules/Loader/Loader";
+@import "components/modules/Footer/Footer";
+@import "components/modules/EmptyCart/EmptyCart";
+@import "components/modules/GoogleAutocomplete/GoogleAutocomplete";
+@import "components/modules/GoogleLocationPicker/GoogleLocationPicker";
+
+// templates styling
+@import "components/templates/home/home";
+@import "components/templates/category/categoryPage";
+@import "components/templates/service/servicePage";
+@import "components/templates/cart/cart";
+@import "components/templates/categories/categories";
+@import "components/templates/modal/UserRegistration";
+@import "components/templates/modal/AddressModal";
+@import "components/templates/checkout/checkout";

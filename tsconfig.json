@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "@element/*": ["./app/components/elements/*"],
+      "@layout/*": ["./app/components/layouts/*"],
+      "@module/*": ["./app/components/modules/*"],
+      "@template/*": ["./app/components/templates/*"],
+      "@styles/*": ["./public/styles/*"],
+      "@constant/*": ["./app/constants/*"],
+      "@context/*": ["./app/context/*"],
+      "@type/*": ["./app/types/*"],
+      "@hook/*": ["./app/hooks/*"],
+      "@action/*": ["./app/context/actions/*"],
+      "@reducer/*": ["./app/context/reducers/*"],
+      "@util/*": ["./app/utils/*"],
+      "@firebase/*": ["./firebase/*"],
+      "@services/*": ["./app/services/*"],
+      "@assets/*": ["./public/assets/*"],
+      "@svgs/*": ["./public/assets/svg/*"],
+      "@api/*": ["./pages/api/*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveConstEnums": true,
+    "strictFunctionTypes": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "firebase/admin.js",
+    "app/components/modules/googleApiWrapper/index.jsx"
+  ],
+  "exclude": ["node_modules"]
+}

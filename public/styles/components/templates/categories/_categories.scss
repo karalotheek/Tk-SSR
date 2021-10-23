@@ -1,0 +1,119 @@
+.categories-page-wrap {
+  .container {
+    width: 100%;
+    margin: auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .action-btn-outer {
+    padding-top: 0;
+  }
+
+  .h1Class {
+    padding-top: 0;
+    margin-top: 100px;
+    font-size: 25px;
+  }
+
+  .h1Class::after {
+    background-image: linear-gradient(270deg, #ffa4c8 0%, #5e55b1 100%);
+    border-radius: 8px;
+    width: 73px;
+    height: 7px;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 100px;
+  }
+
+  li {
+    color: var(--primary-heading-color);
+    font-family: "Regular";
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: SemiBold;
+    padding: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: var(--primary-heading-color);
+    font-size: 17px;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .category {
+    width: 31%;
+    display: inline-block;
+    float: left;
+    background: #ffffff82;
+    border-radius: 35px 0 35px 35px;
+    box-shadow: 0 8px 30px RGB(0 0 0 / 12%);
+    padding-top: 20px;
+    text-align: center;
+    transition: all 300ms ease-in;
+    transform: scale(1);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 30px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    filter: drop-shadow(5px 6px 4px RGBA(0, 0, 0, 0.3));
+  }
+
+  .btn-wrap {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 8px 30px RGB(0 0 0 / 12%);
+  }
+
+  button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    text-align: center;
+    color: white;
+    border-radius: 10px 0 10px 10px;
+    border: none;
+    letter-spacing: 1px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .category {
+      width: 100%;
+      margin: 20px 0 0;
+    }
+    li {
+      color: black;
+      font-family: "Regular";
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      line-height: 31px;
+    }
+    .h1Class {
+      margin-bottom: 0;
+      margin-top: 80px;
+    }
+  }
+}

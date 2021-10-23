@@ -1,0 +1,38 @@
+.empty-cart-wrap {
+  margin-top: 95px;
+  text-align: center;
+
+  .empty-cart {
+    width: 13%;
+  }
+
+  .empty-cart-msg {
+    span {
+      letter-spacing: 2px;
+      font-family: "SemiBold";
+      padding: 15px 0;
+      font-size: 18px;
+    }
+  }
+
+  .add-more-services > div {
+    padding: 0 0 20px;
+  }
+
+  @media only screen and (min-width: 351px) and (max-width: 400px) {
+    .empty-cart-msg {
+      padding: 20px;
+    }
+  }
+
+  @media only screen and (min-width: 401px) and (max-width: 569px) {
+    .empty-cart-msg {
+      padding: 20px;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .empty-cart {
+      width: 25%;
+    }
+  }
+}

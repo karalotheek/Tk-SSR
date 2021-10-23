@@ -1,0 +1,368 @@
+.footer-wrap {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .M-postion-relative {
+    position: relative;
+  }
+
+  .M-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-2 {
+    flex: 2;
+  }
+
+  .flex-3 {
+    flex: 3;
+  }
+
+  .flex-4 {
+    flex: 4;
+  }
+
+  .m-t-120 {
+    margin-top: 120px;
+  }
+
+  .m-r-50 {
+    margin-right: 50px;
+  }
+
+  .p-t-120 {
+    padding-top: 100px;
+  }
+
+  .color-white {
+    color: #ffffff !important;
+  }
+
+  .para-text {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  /* // logo end */
+
+  footer {
+    width: 100%;
+    border-radius: 50% 50% 0 0;
+    margin-top: 120px;
+    background: RGB(110, 115, 164);
+    background: linear-gradient(
+      0deg,
+      RGBA(110, 115, 164, 1) 0%,
+      RGBA(43, 51, 108, 1) 36%
+    );
+  }
+
+  .footer-enquiry {
+    cursor: pointer;
+    background-color: $primary-pink;
+    color: #ffffff;
+    border-radius: 20px 0 20px 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    font-size: 17px;
+    text-align: center;
+    padding: 15px;
+    top: -10px;
+  }
+
+  .footer-subhead {
+    border-bottom: 1px solid #cbbebe;
+    padding-bottom: 5px;
+    color: #cbbebe;
+    margin-bottom: 20px;
+    font-family: SemiBold !important;
+    text-align: left;
+    width: 100%;
+    padding-left: 0;
+    letter-spacing: 1px;
+  }
+
+  .f-service-name {
+    margin-top: 8px;
+    font-family: Regular;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 15px;
+    color: #e4e4e4;
+    letter-spacing: 0.5px;
+  }
+
+  .social-link-wrap {
+    margin-top: 20px;
+  }
+
+  .social-link-wrap > img:last-child {
+    margin-left: 20px;
+  }
+
+  .desktop .services {
+    padding: 0 15px;
+    width: 55%;
+    margin-bottom: 15px;
+  }
+
+  .desktop .contact-link {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .desktop .service {
+    display: inline-block;
+    width: 50%;
+    padding-bottom: 10px;
+    float: left;
+    cursor: pointer;
+  }
+
+  .desktop .service .f-service-name {
+    margin-top: 0;
+  }
+
+  .address .f-service-name {
+    line-height: 20px;
+  }
+
+  .desktop .phone {
+    padding: 0 15px;
+    border-right: 1px solid white;
+  }
+
+  .desktop .email {
+    padding: 0 15px;
+  }
+
+  .desktop .f-contactus {
+    padding: 0 15px;
+    position: relative;
+    width: 25%;
+    margin-bottom: 15px;
+  }
+
+  .desktop .address {
+    line-height: 30px;
+  }
+
+  .desktop .company {
+    padding-left: 10px;
+    width: 20%;
+    margin-bottom: 15px;
+  }
+
+  .desktop .f-contactus .phone {
+    display: inline-block;
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+
+  .desktop .f-service-name {
+    font-size: 15px;
+  }
+
+  .desktop .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 18px;
+    font-size: 18px;
+    color: #cbaba1;
+    padding-bottom: 19px;
+    background-color: #6d72a4;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  .desktop .social-link {
+    display: inline-block;
+    float: right;
+  }
+
+  .desktop .social-icon {
+    margin: 0 20px;
+    width: 20%;
+  }
+
+  .submit-btn-wrap {
+    display: flex;
+  }
+
+  .submit-btn-wrap button {
+    flex: 1;
+    box-shadow: 0 6px 18px -10px #000000;
+    padding: 10px 25px 10px;
+    background-color: $primary-color;
+    color: white;
+    border-color: $primary-color;
+    border-radius: 15px 0 15px 15px;
+  }
+
+  .copyright {
+    text-align: center;
+    background: #6a6fa0;
+    font-size: 13px;
+    color: white;
+    padding-bottom: 15px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+
+  @media only screen and (min-width: 351px) and (max-width: 400px) {
+    .flex-1 {
+      flex-basis: 100%;
+    }
+    .color-white {
+      color: #000000 !important;
+    }
+    footer {
+      border-radius: 60px 60px 0 0;
+      margin-top: 110px;
+      height: auto;
+      padding: 20px 15px;
+    }
+    footer .para-text {
+      color: #ffffff;
+    }
+    .m-r-50 {
+      margin-right: 0;
+    }
+    .top-container > div:first-child {
+      order: 2;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  @media only screen and (min-width: 401px) and (max-width: 569px) {
+    .flex-1 {
+      flex-basis: 100%;
+    }
+    .color-white {
+      color: #000000 !important;
+    }
+    footer {
+      border-radius: 60px 60px 0 0;
+      margin-top: 110px;
+      height: auto;
+      padding: 20px 15px;
+    }
+    footer .para-text {
+      color: #ffffff;
+    }
+    .m-r-50 {
+      margin-right: 0;
+    }
+    .top-container > div:first-child {
+      order: 2;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+    .services {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .f-contactus {
+      position: relative;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .f-contactus .phone {
+      display: inline-block;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    .footer-enquiry {
+      padding: 15px;
+      top: -50px;
+    }
+    .company {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .social-link {
+      width: 100%;
+      text-align: center;
+    }
+    .social-icon {
+      margin: 10px 20px;
+      width: 10%;
+    }
+    .p-t-120 {
+      padding-top: 30px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+    footer {
+      border-radius: 20% 20% 0 0;
+    }
+    .footer-enquiry {
+      top: -20px;
+    }
+    .M-flex-container {
+      padding: 0 50px;
+    }
+    .services {
+      padding: 0 10px;
+      margin-top: 70px;
+      width: 100%;
+    }
+    .f-contactus {
+      padding: 0 10px;
+      width: 50%;
+      display: inline-block;
+    }
+    .company {
+      width: 50%;
+      padding: 0 10px;
+      display: inline-block;
+    }
+    .service-flex-container {
+      width: 50%;
+      display: inline-block;
+    }
+    .social-link {
+      width: 100%;
+      text-align: center;
+    }
+    .social-icon {
+      margin: 10px 20px;
+      width: 10%;
+    }
+  }
+}
