@@ -2,14 +2,7 @@ import Default from '@layout/Default/defaultLayout'
 import CartPage from '@template/cart/CartPage'
 import React, { FC } from 'react'
 import db from '@firebase/admin';
-
-const CartPageWrap: FC<any> = ({ categories }) => {
-    return (
-        <Default>
-            <CartPage categories={categories} />
-        </Default>
-    )
-}
+import Footer from '@module/footer/footer';
 
 export const getStaticProps = async () => {
     const categoriesData = await db.collection('categories').orderBy('index').get();
@@ -33,6 +26,15 @@ export const getStaticProps = async () => {
             categories: categories.filter((cat: any) => cat.active),
         }
     }
+}
+
+const CartPageWrap: FC<any> = ({ categories }) => {
+    return (
+        <Default>
+            <CartPage categories={categories} />
+            <Footer categories={categories} />
+        </Default>
+    )
 }
 
 export default CartPageWrap;

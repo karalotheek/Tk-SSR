@@ -3,16 +3,8 @@ import Default from '@layout/Default/defaultLayout';
 import Home from "@template/home/HomePage";
 import db from '@firebase/admin';
 import { timeStampToNewDate } from "@services/util";
+import Footer from "@module/footer/footer";
 
-const HomeWrapper: FC<any> = ({ categories, curations }) => {
-  return (
-    <div className="home-page-wrapper">
-      <Default>
-        <Home categories={categories} curations={curations} />
-      </Default>
-    </div>
-  );
-}
 
 export const getStaticProps = async () => {
   const categoriesData = await db.collection('categories').orderBy('index').get();
@@ -85,6 +77,17 @@ export const getStaticProps = async () => {
     },
     revalidate: 10
   }
+}
+
+const HomeWrapper: FC<any> = ({ categories, curations }) => {
+  return (
+    <div className="home-page-wrapper">
+      <Default>
+        <Home categories={categories} curations={curations} />
+        <Footer categories={categories} />
+      </Default>
+    </div>
+  );
 }
 
 export default HomeWrapper;

@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import { windowRef } from '@services/window';
 import { getUserByPhone, registerUser } from '@services/users';
 import { LOGO_URL } from '@constant/defaultValues'
+import SvgIcon from "@element/svgIcon";
 const Header = () => {
   const router = useRouter();
 
@@ -235,13 +236,26 @@ const Header = () => {
       case 'login':
         loginOrSignup();
         break;
+      case 'categories':
+        router.push({ pathname: 'categories' }, '', { shallow: true });
+        break;
+      case 'cart':
+        router.push({ pathname: 'cart' }, '', { shallow: true });
+        break;
       default:
-        router.push('/');
+        router.push({ pathname: '/' }, '', { shallow: true });
     }
     // if (nav == 'currentbookingstatus') this.globalService.activeRout = 'currentbookingstatus';
   };
 
 
+  const onClickProfile = () => {
+    // if (this.globalService.loggedInUserData) {
+    //   this.globalService.setActiveNav('myaccount');
+    // } else {
+    //   this.setActiveNav('login');
+    // }
+  }
 
   const toggleClass = (e: any, status: any) => {
     let stringClass = 'nav-active';
@@ -263,20 +277,51 @@ const Header = () => {
     <div className="header-wrapper">
       <header className="c-header clearfix">
         <div className="header-wrapper">
-          <div className="nav-group nav-but-wrap">
+          {/* <div className="nav-group nav-but-wrap">
             <div className="nav-group menu-icon hover-target" onClick={(e) => toggleClass(e, '')}>
               <span className="nav-group menu-icon-line menu-icon-line-left"></span>
               <span className="nav-group menu-icon-line"></span>
               <span className="nav-group menu-icon-line menu-icon-line-right"></span>
             </div>
-          </div>
+          </div> */}
         </div>
       </header>
-      <div className="logo" >
+      <div className="logo" onClick={() => router.push({ pathname: '/' }, '', { shallow: true })}>
         <img src={LOGO_URL} />
       </div>
+      <div className="mobile-nav-wrap mobileNav">
+        <div className="mobile-nav-content">
+          <ul className="mobile-nav-list clearfix">
+            <li onClick={() => setActiveNav('home')}
+              className={(router.pathname.includes('home') || (router.pathname == '/')) ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'}>
+              <a>
+                <SvgIcon icon="home" />Home</a>
+            </li>
+            <li className={router.pathname.includes('categories') ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'} onClick={() => setActiveNav('categories')}
+            >
+              <a>
+                <SvgIcon icon="home2" />
+                Categories
+              </a>
+            </li>
+            <li className={router.pathname.includes('myaccount') ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'} onClick={onClickProfile}>
+              <a>
+                <SvgIcon icon="work" />
+                Person
+              </a>
+            </li>
+            <li className={router.pathname.includes('cart') ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'} onClick={() => setActiveNav('cart')}>
+              <a>
+                <SvgIcon icon="cart" />
+                Cart
+              </a>
+            </li>
+          </ul >
+        </div >
+      </div >
       {/* <a className="movable-logo animate__animated animate__zoomIn animate__faster" onClick={() => router.push('/')}><img src="/assets/img/logo_new.png" alt="Logo" /></a> */}
-      <div className="nav mobileNav">
+
+      {/* < div className="nav mobileNav" >
         <div className={true ? 'before is-logged-in' : 'before'}></div>
         <div className="nav-content">
           <ul className="nav-list clearfix">
@@ -294,7 +339,9 @@ const Header = () => {
             <li className={true ? 'nav-list-item' : 'nav-list-item'}><a>Logout</a></li>
           </ul>
         </div>
-      </div>
+      </div > */}
+
+
       <div className="nav dekstopNav">
         <div className="nav-content">
           <ul className="nav-list clearfix">
@@ -326,7 +373,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 export default Header;

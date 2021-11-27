@@ -2,14 +2,7 @@ import Default from '@layout/Default/defaultLayout'
 import CategoriesPage from '@template/categories/CategoriesPage'
 import React, { FC } from 'react'
 import db from '@firebase/admin';
-
-const Categories: FC<any> = ({ categories, services }) => {
-    return (
-        <Default>
-            <CategoriesPage categories={categories} services={services} />
-        </Default>
-    )
-}
+import Footer from '@module/footer/footer';
 
 export const getStaticProps = async () => {
     const categoriesData = await db.collection('categories').orderBy('index').get();
@@ -59,6 +52,15 @@ export const getStaticProps = async () => {
             services: services.filter((service: any) => service.active),
         }
     }
+}
+
+const Categories: FC<any> = ({ categories, services }) => {
+    return (
+        <Default>
+            <CategoriesPage categories={categories} services={services} />
+            <Footer categories={categories} />
+        </Default>
+    )
 }
 
 export default Categories

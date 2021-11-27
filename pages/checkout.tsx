@@ -4,15 +4,6 @@ import React, { FC } from 'react'
 import db from '@firebase/admin';
 import Footer from '@module/footer/footer';
 
-const CheckoutPageWrap: FC<any> = ({ categories, curations }) => {
-    return (
-        <Default>
-            <CheckoutPage categories={categories} curations={curations} />
-            <Footer categories={categories} />
-        </Default>
-    )
-}
-
 export const getStaticProps = async () => {
     const categoriesData = await db.collection('categories').orderBy('index').get();
     const categories = categoriesData.docs.map((doc) => {
@@ -43,6 +34,15 @@ export const getStaticProps = async () => {
             curations: curations.filter((cat: any) => cat.active),
         }
     }
+}
+
+const CheckoutPageWrap: FC<any> = ({ categories, curations }) => {
+    return (
+        <Default>
+            <CheckoutPage categories={categories} curations={curations} />
+            <Footer categories={categories} />
+        </Default>
+    )
 }
 
 export default CheckoutPageWrap;

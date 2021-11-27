@@ -557,7 +557,7 @@ const CheckoutPage: FC<any> = ({ categories, curations }) => {
             {cartBookingItems.length != 0 ?
                 <div className="container clearfix">
                     <div className="width100" >
-                        <h2 className="primary-heading heading-bottom-border">Complete Booking</h2>
+                        <h2 className="primary-heading heading-bottom-border m-z">Complete Booking</h2>
                     </div>
                     <div className="checkout-steps-outer-wrap">
                         <div className="checkout-steps-outer width100 clearfix">

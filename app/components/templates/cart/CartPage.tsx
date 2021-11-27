@@ -205,7 +205,7 @@ const CartPage: FC<any> = ({ categories }) => {
 
                 {cartBookingItems.length != 0 ? <div className="flex-container">
                     <div className="leftContent">
-                        <h2 className="primary-heading heading-bottom-border">Cart Contains</h2>
+                        <h2 className="primary-heading heading-bottom-border m-z">Cart Contains</h2>
                         <ul className="item-list">
 
 

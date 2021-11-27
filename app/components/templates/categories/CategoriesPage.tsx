@@ -7,7 +7,7 @@ const CategoriesPage: FC<any> = ({ categories, services }) => {
         <div className="categories-page-wrap container clearfix">
             <h3 className="primary-heading heading-bottom-border">Our Services</h3>
             {categories && categories.map((category: any, catIndex: number) => {
-                return <Link href={category.url} key={catIndex}>
+                return <Link href={category.url} key={catIndex} shallow={true}>
                     <div className="category animate__animated animate__zoomIn animate__faster">
                         <div className="">
                             <div className="img">

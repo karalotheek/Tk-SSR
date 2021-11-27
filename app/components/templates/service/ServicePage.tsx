@@ -505,7 +505,7 @@ const ServicePage: FC<any> = ({ categories, services, category, service }) => {
         vibrate();
     }
     const checkout = () => {
-        router.push('cart');
+        router.push({ pathname: 'cart' }, '', { shallow: true });
     }
 
     const addToBucket = (typeDetails: any, status: string) => {
