@@ -410,7 +410,6 @@ const CartPage: FC<any> = ({ categories }) => {
                     <EmptyCart showAddMoreServicesBtn={showAddMoreServicesBtn} />
                 }
 
-                <PopularCategories categories={categories} config={{ showTitle: true }} />
                 {DetectMob() && <div className="items total-container-mob">
                     <div className="container-wrap">
                         <div className="total-wrap width100 clearfix">
@@ -452,6 +451,7 @@ const CartPage: FC<any> = ({ categories }) => {
                         </div>
                     </div>
                 </div>}
+                <PopularCategories categories={categories} config={{ showTitle: true }} />
             </div>
             {itemRemoveConfirmationModal && <RemoveItemCartModal handleClose={closeItemRemovePopup} activeService={serviceToRemove} />}
         </div>

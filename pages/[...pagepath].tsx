@@ -8,6 +8,7 @@ import { windowRef } from '@services/window';
 import { useDispatch } from 'react-redux';
 import { updateCategoriesData, updateServicesData } from '@context/actions';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+import Footer from '@module/footer/footer';
 
 export const getStaticPaths: GetStaticPaths = async () => {
     let paths: any[] = [];
@@ -187,6 +188,7 @@ const CategoryServiceWrapper: FC<any> = ({ categories, services, category, servi
                         <ServicePage categories={activeCategories} services={activeServices} category={activeCategory} service={activeService} />
                         : ''
                 }
+                <Footer categories={activeCategories} />
             </Default>
         </div>
     )

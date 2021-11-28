@@ -11,7 +11,7 @@ type pageProps = {
 const PopularCategories: FC<pageProps> = ({ categories, config }) => {
     return (
         <div className="m-b-60">
-            {config.showTitle && <h3 className="primary-heading heading-bottom-border">{config.title ? config.title : 'Popular Categories'}</h3>}
+            {config.showTitle && <div className="primary-heading heading-bottom-border">{config.title ? config.title : 'Popular Categories'}</div>}
             <div className="M-flex-container m-t-30">
                 {categories.map((category: any, index: number) => {
                     return <Link href={category.url} key={index} shallow={true}>
