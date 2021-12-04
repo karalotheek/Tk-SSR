@@ -15,14 +15,14 @@ const Footer: FC<any> = ({ categories }) => {
     }
     return (
         <div className="footer-wrap">
-            {!isMobile && <footer className="desktop">
+            {!isMobile && <footer className="">
                 <div className="container M-postion-relative">
                     <div className="footer-enquiry" onClick={() => router.push('/')}>
                         Get in touch with us
                     </div>
                     <div className="M-flex-container p-t-120">
                         <div className="f-contactus">
-                            <h4 className="footer-subhead">Contact</h4>
+                            <div className="footer-subhead">Contact</div>
                             <div className="address">
                                 <div className="f-service-name">My Home Builders Tower, Ward 97, NH-72, Harrawala, Dehradun, Uttarakhand
                                     248001
@@ -30,7 +30,7 @@ const Footer: FC<any> = ({ categories }) => {
                             </div>
                         </div>
                         <div className="services">
-                            <h4 className="footer-subhead">Services</h4>
+                            <div className="footer-subhead">Services</div>
                             <div className="service-list clearfix">
                                 {categories.map((category: any, index: number) => {
                                     return <div className="service" key={index}>
@@ -41,7 +41,7 @@ const Footer: FC<any> = ({ categories }) => {
                         </div>
 
                         <div className="company">
-                            <h4 className="footer-subhead">Company</h4>
+                            <div className="footer-subhead">Company</div>
                             <div className="f-service-name" onClick={() => router.push('/')}> About Us </div>
                             <div className="f-service-name" onClick={() => router.push('/')}>Contact Us </div>
                             <div className="f-service-name" onClick={() => router.push('/')} > FAQ</div>
@@ -77,7 +77,7 @@ const Footer: FC<any> = ({ categories }) => {
                     </div>
                     <div className="M-flex-container p-t-120">
                         <div className="services">
-                            <h4 className="footer-subhead">Services</h4>
+                            <div className="footer-subhead">Services</div>
                             <div className="social-link-wrap">
                                 {categories.map((category: any, index: number) => {
                                     return <div className="service-flex-container" key={index}>
@@ -88,7 +88,7 @@ const Footer: FC<any> = ({ categories }) => {
                         </div>
 
                         <div className="company">
-                            <h4 className="footer-subhead">Company</h4>
+                            <div className="footer-subhead">Company</div>
                             <div className="f-service-name" onClick={() => router.push('/')}> About Us </div>
                             <div className="f-service-name" onClick={() => router.push('/')}>Contact Us </div>
                             <div className="f-service-name" onClick={() => router.push('/')}> FAQ</div>
@@ -98,7 +98,7 @@ const Footer: FC<any> = ({ categories }) => {
                         </div>
 
                         <div className="f-contactus">
-                            <h4 className="footer-subhead">Contact</h4>
+                            <div className="footer-subhead">Contact</div>
                             <div className="address">
                                 <div className="f-service-name">My Home Builders Tower, Ward 97, NH-72, Harrawala, Dehradun, Uttarakhand
                                     248001

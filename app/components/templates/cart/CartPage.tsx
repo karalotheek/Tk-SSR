@@ -410,7 +410,7 @@ const CartPage: FC<any> = ({ categories }) => {
                     <EmptyCart showAddMoreServicesBtn={showAddMoreServicesBtn} />
                 }
 
-                {DetectMob() && <div className="items total-container-mob">
+                {(DetectMob() && cartBookingItems.length != 0) && <div className="items total-container-mob">
                     <div className="container-wrap">
                         <div className="total-wrap width100 clearfix">
                             <div className="total-text width60">Sub Total </div>

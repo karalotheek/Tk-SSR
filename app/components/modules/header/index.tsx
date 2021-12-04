@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import firebase from 'firebase';
 import { windowRef } from '@services/window';
 import { getUserByPhone, registerUser } from '@services/users';
-import { LOGO_URL } from '@constant/defaultValues'
+import { LOGO_URL, PRIMARY_PINK_COLOUR, PRIMARY_COLOUR } from '@constant/defaultValues'
 import SvgIcon from "@element/svgIcon";
 const Header = () => {
   const router = useRouter();
@@ -295,29 +295,32 @@ const Header = () => {
             <li onClick={() => setActiveNav('home')}
               className={(router.pathname.includes('home') || (router.pathname == '/')) ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'}>
               <a>
-                <SvgIcon icon="home" />Home</a>
+                <SvgIcon fontSize={22} icon="home3" color={(router.pathname.includes('home') || (router.pathname == '/')) ? PRIMARY_PINK_COLOUR : PRIMARY_COLOUR} /></a>
             </li>
             <li className={router.pathname.includes('categories') ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'} onClick={() => setActiveNav('categories')}
             >
               <a>
-                <SvgIcon icon="home2" />
-                Categories
+                <SvgIcon fontSize={22} icon="categories" color={router.pathname.includes('categories') ? PRIMARY_PINK_COLOUR : PRIMARY_COLOUR} />
               </a>
             </li>
             <li className={router.pathname.includes('myaccount') ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'} onClick={onClickProfile}>
               <a>
-                <SvgIcon icon="work" />
-                Person
+                <SvgIcon fontSize={22} icon="user" color={router.pathname.includes('myaccount') ? PRIMARY_PINK_COLOUR : PRIMARY_COLOUR} />
               </a>
             </li>
             <li className={router.pathname.includes('cart') ? 'active-mobile-nav mobile-nav-item ' : 'mobile-nav-item'} onClick={() => setActiveNav('cart')}>
               <a>
-                <SvgIcon icon="cart" />
-                Cart
+                <SvgIcon fontSize={22} icon="cart" color={router.pathname.includes('cart') ? PRIMARY_PINK_COLOUR : PRIMARY_COLOUR} />
               </a>
             </li>
           </ul >
+          <div className="floating-search">
+            <div className="floating-wrap">
+              <SvgIcon icon="search" />
+            </div>
+          </div>
         </div >
+
       </div >
       {/* <a className="movable-logo animate__animated animate__zoomIn animate__faster" onClick={() => router.push('/')}><img src="/assets/img/logo_new.png" alt="Logo" /></a> */}
 

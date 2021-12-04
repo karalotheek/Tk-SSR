@@ -9,7 +9,9 @@ import Send from "@svgs/send.svg";
 import Work from "@svgs/work.svg";
 import Home from "@svgs/home.svg";
 import Home2 from "@svgs/home2.svg";
+import Home3 from "@svgs/home3.svg";
 import Info from "@svgs/info.svg";
+import User from "@svgs/user.svg";
 import Add from "@svgs/add.svg";
 import Edit from "@svgs/edit.svg";
 import Remove from "@svgs/remove.svg";
@@ -29,6 +31,8 @@ import AddUser from "@svgs/addUser.svg";
 import Login from "@svgs/login.svg";
 import Checkbox from "@svgs/checkbox.svg";
 import AddAddress from "@svgs/addAddress.svg";
+import Categories from "@svgs/categories.svg";
+import Search from "@svgs/search.svg";
 import { FC } from "react";
 
 const icons: any = {
@@ -42,7 +46,9 @@ const icons: any = {
     work: Work,
     home: Home,
     home2: Home2,
+    home3: Home3,
     info: Info,
+    user: User,
     add: Add,
     edit: Edit,
     remove: Remove,
@@ -62,6 +68,8 @@ const icons: any = {
     login: Login,
     checkbox: Checkbox,
     addAddress: AddAddress,
+    categories: Categories,
+    search: Search
 };
 
 type Props = {
